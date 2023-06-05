@@ -12,6 +12,7 @@ const verificarNum = () => {
   return precio;
 };
 const guardarProductos = (product, price) => {
+  //Guardar productos en una lista proximamente.
   alert("El producto es: " + product);
   alert("El precio es: " + price);
 };
