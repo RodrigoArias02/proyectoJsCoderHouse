@@ -5,7 +5,7 @@ let list = [];
 let categoria = "";
 
 const verificarNum = () => {
-  precio = prompt("Seleccione el precio");
+  precio = prompt("Escriba el precio");
   if (!Number.isNaN(precio) && precio >= 0 && precio.trim() !== "") {
   } else {
     alert("el valor no es numerico");
@@ -32,12 +32,12 @@ const guardarProductos = (product, price, category) => {
 const ingresarElementos = () => {
   let ciclo = true;
   while (ciclo === true) {
-    producto = prompt("Seleccione el producto");
+    producto = prompt("Escriba un producto");
     precio = verificarNum();
     while (precio === -1) {
       precio = verificarNum();
     }
-    categoria = prompt("Seleccione categoria");
+    categoria = prompt("Escriba una categoria");
     const productos = guardarProductos(producto, precio, categoria);
     list = list.concat(productos);
 
@@ -51,9 +51,10 @@ const mostrarLista = (list) => {
   let i = 0;
   list.forEach((num) => {
     mensaje +=
-      i + ": " + num.producto + " " + num.precio + " " + num.categoria + "\n";
+      i + ": " + num.producto + " $" + num.precio + " " + num.categoria + "\n";
     i++;
   });
+  console.log("mensaje");
   return mensaje;
 };
 let ciclo = true,
