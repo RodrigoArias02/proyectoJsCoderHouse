@@ -13,10 +13,12 @@ const verificarNum = () => {
   }
   return precio;
 };
+
 const eliminarElemento = (list, eliminar) => {
   list.splice(eliminar, 1);
   return list;
 };
+
 const guardarProductos = (product, price, category) => {
   let objetProduct = {};
   objetProduct.producto = product;
